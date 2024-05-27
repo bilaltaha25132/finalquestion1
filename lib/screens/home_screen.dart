@@ -9,8 +9,8 @@ import 'product_list_screen.dart';
 
 class HomeScreen extends ConsumerWidget {
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final categories = watch(categoryProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final categories = ref.watch(categoryProvider);
 
     return Scaffold(
       appBar: AppBar(title: Text('Categories')),

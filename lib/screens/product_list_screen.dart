@@ -10,8 +10,8 @@ class ProductListScreen extends ConsumerWidget {
   ProductListScreen({required this.categoryId});
 
   @override
-  Widget build(BuildContext context, ScopedReader watch) {
-    final products = watch(productProvider(categoryId));
+  Widget build(BuildContext context, WidgetRef ref) {
+    final products = ref.watch(productProvider(categoryId));
 
     return Scaffold(
       appBar: AppBar(title: Text('Products in $categoryId')),
